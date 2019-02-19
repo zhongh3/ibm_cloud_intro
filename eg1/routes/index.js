@@ -1,6 +1,5 @@
 exports.listSysTables = function(ibmdb,connString) {
     return function(req, res) {
-
 	   	   
        ibmdb.open(connString, function(err, conn) {
 			if (err ) {
@@ -12,7 +11,6 @@ exports.listSysTables = function(ibmdb,connString) {
 					Perhaps it's related to the length of column name.
 					e.g. CC doesn't require "", but Coutry_Code does.
 				*/
-
 				conn.query('SELECT "Country_Code","Short_Name","Table_Name" FROM LMZ63451.EDSTATS FETCH FIRST 10 ROWS ONLY', function(err, tables, moreResultSets) {
 				// conn.query("SELECT * FROM LMZ63451.EDSTATS FETCH FIRST 10 ROWS ONLY", function(err, tables, moreResultSets) {
 							
@@ -23,7 +21,6 @@ exports.listSysTables = function(ibmdb,connString) {
 						"message": "Congratulations. Your connection to Db2 is successful."
 						
 					 });
-
 					
 				} else {
 				   res.send("error occurred " + err.message);
@@ -39,6 +36,5 @@ exports.listSysTables = function(ibmdb,connString) {
 				});
 			}
 		} );
-	   
 	}
-	}
+}
