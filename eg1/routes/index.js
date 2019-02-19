@@ -7,14 +7,19 @@ exports.listSysTables = function(ibmdb,connString) {
 			 res.send("error occurred " + err.message);
 			}
 			else {
-				conn.query("SELECT * FROM LMZ63451.EDSTATS FETCH FIRST 10 ROWS ONLY", function(err, tables, moreResultSets) {
-				// conn.query("SELECT * FROM LDZ12073.STATS FETCH FIRST 10 ROWS ONLY", function(err, tables, moreResultSets) {
-							
+				/* 
+					Test shows that column names need to be surrounded by "" for some cases.
+					Perhaps it's related to the length of column name.
+					e.g. CC doesn't require "", but Coutry_Code does.
+				*/
+
+				conn.query('SELECT "Country_Code","Short_Name","Table_Name" FROM LMZ63451.EDSTATS FETCH FIRST 10 ROWS ONLY', function(err, tables, moreResultSets) {
+				// conn.query("SELECT * FROM LMZ63451.EDSTATS FETCH FIRST 10 ROWS ONLY", function(err, tables, moreResultSets) {
 							
 				if ( !err ) { 
 					res.render('tablelist', {
 						"tablelist" : tables,
-						"tableName" : "10 rows from the STATS table",
+						"tableName" : "10 rows of first 3 columns from the EDSTATS table",
 						"message": "Congratulations. Your connection to Db2 is successful."
 						
 					 });
