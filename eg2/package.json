@@ -14,8 +14,8 @@
     "watson-developer-cloud": "x"
   },
   "engines": {
-    "node": "x",
-    "npm": "x"
+    "node": "4.2.4",
+    "npm": "3.10.10"
   },
   "repository": {
     "type": "git",
