@@ -56,7 +56,8 @@ app.post('/upload', uploading.single('file'), function (request, response) {
                 response.send(error);
             }
             else {
-				response.json(result);				
+                console.log("got the result!")
+				response.json("Word Count = " + result.word_count);
             }
         }
     );

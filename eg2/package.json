@@ -7,15 +7,15 @@
   },
   "dependencies": {
     "body-parser": "^1.14.2",
+    "cf-deployment-tracker-client": "*",
     "cfenv": "1.0.x",
-    "express": "4.12.x",
+    "express": "^4.16.4",
     "multer": "^1.1.0",
-    "watson-developer-cloud": "x",
-    "cf-deployment-tracker-client": "*"
+    "watson-developer-cloud": "x"
   },
   "engines": {
-    "node": "4.2.4",
-    "npm": "3.10.10"
+    "node": "x",
+    "npm": "x"
   },
   "repository": {
     "type": "git",
