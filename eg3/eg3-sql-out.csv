@@ -1,0 +1,11 @@
+Country_Code,Long_Name,Currency_Unit,Income_Group,System_of_trade
+"SLV","Republic of El Salvador","U.S. dollar","Lower middle income","Special trade system"
+"STP","Democratic Republic of S�o Tom� and Principe","S�o Tom� and Principe dobra","Lower middle income","Special trade system"
+"SEN","Republic of Senegal","CFA franc","Lower middle income","General trade system"
+"SLE","Republic of Sierra Leone","Sierra Leonean leone","Low income","Special trade system"
+"SLB","Solomon Islands","Solomon Islands dollar","Lower middle income","Special trade system"
+"SOM","Somali Democratic Republic","Somali shilling","Low income",""
+"SSD","Republic of South Sudan","South Sudanese Pound","Lower middle income",""
+"SDN","Republic of the Sudan","Sudanese pound","Lower middle income","General trade system"
+"SWZ","Kingdom of Swaziland","Swaziland lilangeni","Lower middle income","General trade system"
+"SYR","Syrian Arab Republic","Syrian pound","Lower middle income","Special trade system"
